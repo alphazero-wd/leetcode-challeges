@@ -1,6 +1,6 @@
-import { containsDuplicates } from '../src/1_containsDuplicates'
+import { containsDuplicates } from '../../src/problems/1_containsDuplicates'
 
-it('should return true', () => {
+it('test 1', () => {
   expect(containsDuplicates([1, 2, 3, 1])).toBeTruthy()
 })
 
