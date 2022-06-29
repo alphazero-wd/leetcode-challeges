@@ -24,4 +24,8 @@ describe('detect cycle in a linked list', () => {
 		head = new ListNode(1)
 		expect(hasCycle(head)).toBeFalsy()
 	})
+	test('should return false', () => {
+		head = null
+		expect(hasCycle(head)).toBeFalsy()
+	})
 })

@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/linked-list-cycle/
 import { ListNode } from "../data-structures/ListNode";
 
 const hasCycle = (head: ListNode | null): boolean => {
