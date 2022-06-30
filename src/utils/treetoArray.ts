@@ -1,7 +1,7 @@
 import { TreeNode } from "../data-structures/TreeNode";
 
-export const treeToArray = (root: TreeNode | null) => {
-  const res = []
+export const treeToArray = (root: TreeNode | null): number[] => {
+  const res: number[] = []
   const inorder = (root: TreeNode | null) => {
     if (!root) return
     inorder(root.left)
@@ -9,4 +9,5 @@ export const treeToArray = (root: TreeNode | null) => {
     inorder(root.right)
   }
   inorder(root)
+  return res;
 }
