@@ -1,6 +1,7 @@
+// https://leetcode.com/problems/remove-linked-list-elements/
 import { ListNode } from "../data-structures/ListNode";
 
-const removeElements = (head: ListNode | null, val: number): ListNode | null => {
+export const removeElements = (head: ListNode | null, val: number): ListNode | null => {
   const dummy = new ListNode(0)
   dummy.next = head
   let prev = dummy
@@ -12,5 +13,3 @@ const removeElements = (head: ListNode | null, val: number): ListNode | null => 
   }
   return dummy.next;
 };
-
-export { removeElements };

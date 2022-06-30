@@ -1,7 +1,7 @@
+// https://leetcode.com/problems/palindrome-linked-list/
 import { ListNode } from "../data-structures/ListNode";
 
-// https://leetcode.com/problems/palindrome-linked-list/
-const isPalindrome = (head: ListNode | null): boolean => {
+export const isPalindrome = (head: ListNode | null): boolean => {
   let fast = head, slow = head
   while (fast && fast.next) {
     fast = fast.next.next;
@@ -22,5 +22,3 @@ const reverseLinkedList = (head: ListNode | null, prev: ListNode | null = null):
   head.next = prev
   return reverseLinkedList(next, head)
 }
-
-export { isPalindrome };

@@ -3,8 +3,12 @@ echo Enter the file name:
 
 read filename
 
-touch src/problems/$filename.ts
-touch test/problems/$filename.test.ts
+echo Enter the problem number:
 
-printf "const $filename = () => {\n\n};\n\nexport { $filename };" > src/problems/$filename.ts
-printf "import { $filename } from '../../src/problems/$filename';\n\ntest('should do something', () => {\n\texpect($filename()).toBe(0)\n});" > test/problems/$filename.test.ts
+read problem_number
+
+touch src/problems/$problem_number\_$filename.ts
+touch test/problems/$problem_number\_$filename.test.ts
+
+printf "export const $filename = () => {\n\n};" > src/problems/$problem_number\_$filename.ts
+printf "import { $filename } from '../../src/problems/$problem_number\_$filename';\n\ntest('should do something', () => {\n\texpect($filename()).toBe(0)\n});" > test/problems/$problem_number\_$filename.test.ts

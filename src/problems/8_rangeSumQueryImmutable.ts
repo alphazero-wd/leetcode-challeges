@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/range-sum-query-immutable/
 
-class NumArray {
+export class NumArray {
   prefixSum: number[];
   constructor(nums: number[]) {
     this.prefixSum = nums
@@ -14,5 +14,3 @@ class NumArray {
     return (this.prefixSum[right] as number) - (this.prefixSum[left - 1] as number)
   }
 }
-
-export { NumArray }

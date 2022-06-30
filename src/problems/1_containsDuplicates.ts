@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/contains-duplicate/
 
-const containsDuplicates = (nums: number[]): boolean => {
+export const containsDuplicates = (nums: number[]): boolean => {
   const dup = new Set()
   for (let num of nums) {
     if (dup.has(num)) return true;
@@ -8,4 +8,3 @@ const containsDuplicates = (nums: number[]): boolean => {
   }
   return false;
 }
-export { containsDuplicates };

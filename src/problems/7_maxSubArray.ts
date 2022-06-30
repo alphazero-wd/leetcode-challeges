@@ -1,4 +1,4 @@
-const maxSubArray = (nums: number[]): number => {
+export const maxSubArray = (nums: number[]): number => {
   let maxSum = -Infinity
   let currentSum = -Infinity
   for (let num of nums) {
@@ -7,5 +7,3 @@ const maxSubArray = (nums: number[]): number => {
   }
   return maxSum
 };
-
-export { maxSubArray };

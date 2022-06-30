@@ -1,4 +1,4 @@
-const maxProfit = (prices: number[]): number => {
+export const maxProfit = (prices: number[]): number => {
   let minPrice = Infinity
   let maxPrice = -Infinity
   for (let price of prices) {
@@ -7,5 +7,3 @@ const maxProfit = (prices: number[]): number => {
   }
   return maxPrice
 };
-
-export { maxProfit };
